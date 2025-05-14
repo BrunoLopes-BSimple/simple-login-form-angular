@@ -1,0 +1,18 @@
+<div class="form-container">
+    <!-- [formGroup] liga o html a um form group criado no ts, neste caso, registerForm -->
+    <form [formGroup]="registerForm" (submit)="registerUser()">
+        <label for="name">First name</label>
+        <input id="name" type="text" formControlName="firstName">
+
+        <label for="surname">Last name</label>
+        <input id="surname" type="text" formControlName="lastName">
+
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email">
+
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password">
+
+        <button type="submit">Register</button>
+    </form>
+</div>

@@ -1,0 +1,9 @@
+@if (logedInSuccessfully && !userLoggedOut) {
+<app-user-home [user]="logedInUser" (sendLogout)="userWantsToLogout($event)"></app-user-home>
+}@else {
+@if (registerUserCliked) {
+<app-register (sendUser)="receiveUser($event)"></app-register>
+}@else {
+<app-login (sendLoginInfo)="checkLoginInfo($event)" (sendRegisterRequest)="userWantsToRegister($event)"></app-login>
+}
+}
