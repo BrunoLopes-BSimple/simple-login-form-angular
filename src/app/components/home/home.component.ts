@@ -5,11 +5,12 @@ import { UserService } from '../../services/user.service';
 import { LoginComponent } from '../login/login.component';
 import { LoginInfo } from '../../interfaces/login-info';
 import { UserHomeComponent } from '../user-home/user-home.component';
+import { FormArrayComponent } from '../form-array/form-array.component';
 UserHomeComponent
 
 @Component({
   selector: 'app-home',
-  imports: [RegisterComponent, LoginComponent, UserHomeComponent],
+  imports: [RegisterComponent, LoginComponent, UserHomeComponent, FormArrayComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

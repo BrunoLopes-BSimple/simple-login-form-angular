@@ -1,0 +1,14 @@
+<form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+    <div formArrayName="emails">
+        <div *ngFor="let emailCtrl of emails.controls; let i = index">
+            <input [formControlName]="i" placeholder="Enter email" />
+            <button type="button" (click)="removeEmail(i)">Remove</button>
+            <div *ngIf="emailCtrl.invalid && emailCtrl.touched">
+                Invalid email
+            </div>
+        </div>
+    </div>
+    <button type="button" (click)="addEmail()">Add Email</button>
+    <button type="submit" [disabled]="emailForm.invalid">Submit</button>
+</form>
+  
