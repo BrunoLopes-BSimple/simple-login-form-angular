@@ -89,6 +89,17 @@
             ],
             "scripts": []
           }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "afericao-with-reactive-forms:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "afericao-with-reactive-forms:serve:production"
+            }
+          }
         }
       }
     }
